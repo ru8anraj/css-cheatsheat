@@ -1,0 +1,11 @@
+@import './../../styles/variables.scss';
+
+.header {
+    background-color: $primaryColor;
+    height: 60px;
+    width: 100%;
+    color: whitesmoke;
+    font-size: 42px;
+    font-family: $primaryFont;
+    text-align: center;
+}
