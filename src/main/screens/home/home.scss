@@ -1,6 +1,7 @@
-@import "./../../styles/variables.scss";
+@import "./../../assets/styles/variables.scss";
 
 .home {
     color: $primaryFontColor;
     text-align: center;
+    font-family: $secondaryFont;
 }
