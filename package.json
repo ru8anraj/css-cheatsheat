@@ -9,7 +9,7 @@
     "build": "webpack --mode production",
     "serve": "node ./serve.js",
     "deploy": "npm run build && npm run serve",
-    "test": "jest",
+    "test": "jest --coverage --env=jsdom",
     "lint": "eslint src/**/*.jsx"
   },
   "repository": {
@@ -30,6 +30,18 @@
   "bugs": {
     "url": "https://github.com/ru8anraj/css-cheatsheat/issues"
   },
+  "jest": {
+    "bail": true,
+    "collectCoverage": true,
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/test/config/setUpTests.js"
+    ],
+    "testURL": "http://localhost",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/test/config/__mocks__/fileMock.js",
+      "\\.(css|scss|sass)$": "<rootDir>/src/test/config/__mocks__/styleMock.js"
+    }
+  },
   "homepage": "https://github.com/ru8anraj/css-cheatsheat#readme",
   "dependencies": {
     "react": "^16.13.1",
@@ -41,10 +53,14 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
+    "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
     "html-webpack-plugin": "^4.3.0",
+ "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^26.0.1",
+    "jsdom": "^16.2.2",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
