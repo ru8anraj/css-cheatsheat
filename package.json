@@ -7,8 +7,6 @@
     "start": "webpack-dev-server --mode development --hot",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "serve": "node ./serve.js",
-    "deploy": "npm run build && npm run serve",
     "test": "jest --coverage --env=jsdom",
     "lint": "eslint src/**/*.jsx"
   },
