@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import {
   Home,
-} from './screens/index.js';
+} from './screens/index';
 
 const app = () => (
   <HashRouter>
